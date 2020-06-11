@@ -41,7 +41,7 @@ namespace RestaurantReview
             {
                 endpoints.MapControllerRoute(
                     name: "defaut",
-                    pattern: "{controller=Course}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
         }

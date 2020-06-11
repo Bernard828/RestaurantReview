@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using RestaurantReview.Models;
 
 namespace RestaurantReview.Controllers
 {
@@ -11,7 +12,8 @@ namespace RestaurantReview.Controllers
 
         public ViewResult Index()
         {
-            return View();
+            GreetModel model = new GreetModel("Donato's", 99, "Pretty decent pizza");
+            return View(model);
         }
     }
 }
