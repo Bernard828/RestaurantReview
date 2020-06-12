@@ -12,7 +12,7 @@ namespace RestaurantReview.Controllers
 
         public ViewResult Index()
         {
-            GreetModel model = new GreetModel("Donato's", 99, "Pretty decent pizza");
+            Restaurant model = new Restaurant("Donato's", 99, "Pretty decent pizza");
             return View(model);
         }
     }

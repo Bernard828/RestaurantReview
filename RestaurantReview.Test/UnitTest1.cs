@@ -14,5 +14,14 @@ namespace RestaurantReview.Test
             var result = underTest.Index();
             Assert.IsType<ViewResult>(result);
         }
-    }
+        [Fact]
+    public void Index_Passes_Restaurant_Model_Is_View()
+        {
+            var underTest = new HomeController();
+
+            var result = underTest.Index();
+
+            Assert.IsType <RestaurantReview.Models.Restaurant>(result.Model);
+        }
+    } 
 }

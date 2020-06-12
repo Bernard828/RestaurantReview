@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace RestaurantReview.Models
 {
-    public class GreetModel
+    public class Restaurant
     {//Course model = new Course("Intro to MVC", 42, "All you need to know about MVC");
-        public GreetModel(string name, int id, string details)
+        public Restaurant(string name, int id, string details)
         {
             this.Name = name;
             this.Id = id;
