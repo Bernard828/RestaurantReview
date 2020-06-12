@@ -1,0 +1,113 @@
+﻿.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+    .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+        .topnav a:hover {
+            background-color: rgb(242,141,179);
+            color: rgb(255, 255, 255);
+        }
+
+        .topnav a.active {
+            background-color: rgb(105,237,222);
+            color: rgb(255,221,255);
+        }
+
+main {
+    width: 80%;
+    margin: 3em auto;
+}
+#sampleProjects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 1em;
+}
+body {
+    
+    background-image: url(images/viktor-juric-zR4itwRfBX8-unsplash.jpg);
+    background-size: cover;
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--black);
+    font: 16px/1.5 'Raleway', sans-serif;
+}
+
+span {
+    text-align: center;
+    color: rgb(242,141,179);
+    background-color: rgb(79, 78, 136);
+}
+
+.container {
+    display: grid;
+    margin: 2rem auto 2rem auto;
+    width: 1500px;
+    background-color: aqua;
+    opacity: 0.6;
+}
+
+img {
+    width: 100px;
+    align-content: center;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    background-color: rgb(79, 78, 136);
+}
+
+h2 {
+    color: rgb(242,141,179);
+    text-align: center;
+    background-color: rgb(79, 78, 136);
+}
+
+h3 {
+    color: rgb(242,141,179);
+    text-align: center;
+    background-color: rgb(79, 78, 136);
+}
+
+h4 {
+    color: rgb(242,141,179);
+    text-align: center;
+    background-color: rgb(79, 78, 136);
+}
+
+h5 {
+    color: rgb(242,141,179);
+    text-align: center;
+    background-color: rgb(79, 78, 136);
+}
+
+h6 {
+    color: rgb(242,141,179);
+    text-align: center;
+    background-color: rgb(79, 78, 136);
+    font-size: 16px;
+}
+
+h7 {
+    color: rgb(242,141,179);
+    text-align: center;
+    background-color: rgb(79, 78, 136);
+}
+
+h8 {
+    color: rgb(242,141,179);
+    text-align: center;
+    background-color: rgb(79, 78, 136);
+}
