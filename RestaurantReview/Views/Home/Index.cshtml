@@ -1,5 +1,4 @@
-﻿@model RestaurantReview.Models.Restaurant
-
+﻿@model IEnumerable<RestaurantReview.Models.Restaurant>
 @{
     Layout = null;
 }
@@ -10,10 +9,16 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    <link href="~/style.Homestyle.css" rel="stylesheet" />
 </head>
 <body>
     <h1>Welcome to Restaurant Reviews!</h1>
-    <p>@Model.Name</p>
-    <p>@Model.Details</p>
+    @foreach (var restaurant in Model)
+    {
+        <p>Title:<span>@restaurant.Name</span></p>
+        <p>Review:<span>@restaurant.Details</span></p>
+        <p>Id:<span>@restaurant.Id</span></p>
+    }
+
 </body>
 </html>
