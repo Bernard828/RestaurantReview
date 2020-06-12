@@ -16,6 +16,9 @@ namespace RestaurantReview.Models
         public string Name { get; set; }
         public int Id { get; set; }
         public string Details { get; set; }
+        public string LinkImage { get; set; }
+        public string LinkUrl { get; set; }
+        public string LinkDescription { get; set; }
 
     }
     
