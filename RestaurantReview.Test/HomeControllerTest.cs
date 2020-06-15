@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace RestaurantReview.Test
 {
-    public class RestaurantReviewTest
+    public class HomeControllerTest
     {
         [Fact]
         public void Index_Returns_ViewResult()
