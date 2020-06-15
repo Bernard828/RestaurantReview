@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestaurantReview.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,11 +8,14 @@ namespace RestaurantReview.Models
 {
     public class Restaurant
     {//Course model = new Course("Intro to MVC", 42, "All you need to know about MVC");
-        public Restaurant(string name, int id, string details)
+        public Restaurant(string name, int id, string details, string linkImage, string linkUrl, string linkDescription)
         {
             this.Name = name;
             this.Id = id;
             this.Details = details;
+            this.LinkImage = linkImage;
+            this.LinkUrl = linkUrl;
+            this.LinkDescription = linkDescription;
         }
         public string Name { get; set; }
         public int Id { get; set; }
