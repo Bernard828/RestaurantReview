@@ -1,5 +1,4 @@
-﻿@model HelloMVC.Models.GreetModel
-
+﻿@model IEnumerable<RestaurantReview.Models.Restaurant>
 @{
     Layout = null;
 }
@@ -10,8 +9,33 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="~/style/Homestyle.css"/>
 </head>
 <body>
-    <div>Hello, @Model.Name </div>
+
+    <h1>Welcome to Restaurant Reviews!</h1>
+    <section>
+    <div id="sampleProjects">
+        @foreach (var restaurant in Model)
+        {
+            @*<p>Title:<span>@restaurant.Name</span></p>
+                <p>Review:<span>@restaurant.Details</span></p>
+                <p>Id:<span>@restaurant.Id</span></p>*@
+        <article>
+            @*<h3>@restaurant.Name</h3>
+            <a href="https://www.donatos.com" target="_blank" alt="GridTestProject"
+               title="GridTestProject"><img src="images/Donatos-Pizza-restaurant-1200x900.jpg" id="project_item"></a>
+            <p>@restaurant.Details</p>*@
+
+            <h3>@restaurant.Name</h3>
+            <a href=@restaurant.LinkUrl target="_blank" alt="GridTestProject"
+               title="GridTestProject"><img src=@restaurant.LinkImage id="project_item"></a>
+            <p>@restaurant.Details</p>
+
+        </article>
+
+        }
+        </div>
+        </section>
 </body>
 </html>
