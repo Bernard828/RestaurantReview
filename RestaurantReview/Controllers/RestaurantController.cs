@@ -12,20 +12,27 @@ namespace RestaurantReview.Controllers
     public class RestaurantController : Controller
     {
 
-      private readonly RestaurantRepository restaurantRepository = new RestaurantRepository();
+
+        IRepository<Restaurant> restRepo;
+
+        public RestaurantController(IRepository<Restaurant> restRepo)
+        {
+            this.restRepo = restRepo;
+        }
+
 
 
         public ViewResult Index()
         {
-            
-            var model = restaurantRepository.GetAll();
+           //Use our repo that is on line 17
+        var model = restRepo.GetAll();
             return View(model);
         }
 
         public ViewResult Details(int id)
         {
-
-            var model = restaurantRepository.GetById(id);
+            //Use our repo that is on line 17
+            var model = this.restRepo.GetById(id);
             return View(model);
 
 
