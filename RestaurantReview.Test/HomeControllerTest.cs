@@ -10,14 +10,14 @@ namespace RestaurantReview.Test
         [Fact]
         public void Index_Returns_ViewResult()
         {
-            var underTest = new HomeController();
+            var underTest = new RestaurantController();
             var result = underTest.Index();
             Assert.IsType<ViewResult>(result);
         }
         [Fact]
     public void Index_Passes_Restaurant_Model_Is_View()
         {
-            var underTest = new HomeController();
+            var underTest = new RestaurantController();
 
             var result = underTest.Index();
 

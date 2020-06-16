@@ -9,15 +9,27 @@ using RestaurantReview.Repositories;
 
 namespace RestaurantReview.Controllers
 {
-    public class HomeController : Controller
+    public class RestaurantController : Controller
     {
+
+        RestaurantRepository restaurantRepository = new RestaurantRepository();
+
 
         public ViewResult Index()
         {
-            //Restaurant model = new Restaurant("Donato's", 99, "Pretty decent pizza");
-            RestaurantRepository restaurantRepository = new RestaurantRepository();
+            
             var model = restaurantRepository.GetAll();
             return View(model);
         }
+
+        public ViewResult Details(int id)
+        {
+
+            var model = restaurantRepository.GetById(id);
+            return View(model);
+
+
+        }
+
     }
 }

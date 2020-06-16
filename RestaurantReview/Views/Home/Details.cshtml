@@ -1,0 +1,29 @@
+﻿@model RestaurantReview.Models.Restaurant
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="~/style/Homestyle.css"/>
+</head>
+<body>
+
+    <h1>Welcome to Restaurant Reviews!</h1>
+    <section>
+    <div id="sampleProjects">
+        
+
+            <h3>@Model.Name</h3>
+            <a href=@model.LinkUrl target="_blank" alt="GridTestProject"
+               title="GridTestProject"><img src=@model.LinkImage id="project_item"></a>
+            <p>@model.Details</p>
+
+        </div>
+        </section>
+</body>
+</html>
