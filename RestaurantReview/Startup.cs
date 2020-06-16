@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using RestaurantReview.Models;
+using RestaurantReview.Repositories;
 
 namespace RestaurantReview
 {
@@ -23,6 +25,7 @@ namespace RestaurantReview
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddScoped<IRepository<Restaurant>, RestaurantRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

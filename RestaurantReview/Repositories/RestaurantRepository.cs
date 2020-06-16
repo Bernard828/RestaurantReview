@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace RestaurantReview.Repositories
 {
-    public class RestaurantRepository : IRepository
+    public class RestaurantRepository : IRepository<Restaurant>
     {
         public List<RestaurantReview.Models.Restaurant> restaurants;
 

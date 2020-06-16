@@ -12,7 +12,7 @@ namespace RestaurantReview.Controllers
     public class RestaurantController : Controller
     {
 
-        RestaurantRepository restaurantRepository = new RestaurantRepository();
+      private readonly RestaurantRepository restaurantRepository = new RestaurantRepository();
 
 
         public ViewResult Index()
