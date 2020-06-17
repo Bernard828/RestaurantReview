@@ -12,9 +12,11 @@ namespace RestaurantReview.Repositories
     {
         public List<RestaurantReview.Models.Restaurant> restaurants;
 
-        public RestaurantRepository()
+        private RestaurantContext db;
+
+        public RestaurantRepository(RestaurantContext otherDb)
         {
-            restaurants = new List<Restaurant>();
+            this.db = otherDb;
         }
         public IEnumerable<Restaurant> GetAll()
         {
@@ -25,5 +27,6 @@ namespace RestaurantReview.Repositories
         {
             return restaurants.FirstOrDefault(x => x.Id == id);
         }
+        
     }
 }

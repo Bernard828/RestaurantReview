@@ -25,6 +25,7 @@ namespace RestaurantReview
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddDbContext<RestaurantContext>();
             services.AddScoped<IRepository<Restaurant>, RestaurantRepository>();
         }
 
