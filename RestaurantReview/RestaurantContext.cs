@@ -10,7 +10,7 @@ namespace RestaurantReview
     public class RestaurantContext : DbContext
     {
         public DbSet<Restaurant> Restaurants { get; set; }
-        //public DbSet<Instructor> Instructors { get; set; }
+        public DbSet<Review> Reviews { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

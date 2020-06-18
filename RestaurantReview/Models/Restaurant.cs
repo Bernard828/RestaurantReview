@@ -16,6 +16,10 @@ namespace RestaurantReview.Models
         public string LinkUrl { get; set; }
         public string LinkDescription { get; set; }
 
+        
+
+        public virtual ICollection<Review>Reviews { get;set; }
+
 
 
         public Restaurant(string name, int id, string details, string linkImage, string linkUrl, string linkDescription)
