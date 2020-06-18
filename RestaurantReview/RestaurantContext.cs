@@ -60,8 +60,30 @@ namespace RestaurantReview
                      LinkDescription = "Pier W Image",
                  });
 
+            modelBuilder.Entity<Review>().HasData(
+                new Review()
+                {
+                    RestaurantId = 1,
+                    Creator = "Bernard",
+                    Comment = " Pepporoni Pizza is awesome",
+                    ReviewDate = DateTime.Now
+                },
+                new Review()
+                {
+                    RestaurantId = 2,
+                    Creator = "Jay",
+                    Comment = " Their burritos were great!",
+                    ReviewDate = DateTime.Now
+                },
+                new Review()
+                {
+                    RestaurantId = 3,
+                    Creator = "Dakota",
+                    Comment = "The seafood here is pretty ok for Lake Erie",
+                    ReviewDate = DateTime.Now,
+                });
 
-            base.OnModelCreating(modelBuilder);
+           base.OnModelCreating(modelBuilder);
         }
     }
 }
