@@ -27,8 +27,10 @@ namespace RestaurantReview.Models
             this.LinkUrl = linkUrl;
             this.LinkDescription = linkDescription;
         }
-      
 
+        public Restaurant()
+        {
+        }
     }
     
 }
