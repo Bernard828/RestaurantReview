@@ -20,12 +20,12 @@ namespace RestaurantReview.Repositories
         }
         public IEnumerable<Restaurant> GetAll()
         {
-            return db.;
+            return db.Restaurants.ToList();
         }
 
         public Restaurant GetById(int id)
         {
-            return db.FirstOrDefault(x => x.Id == id);
+            return db.Restaurants.FirstOrDefault(x => x.Id == id);
         }
         
     }
