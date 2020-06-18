@@ -11,6 +11,7 @@ namespace RestaurantReview
     {
         public DbSet<Restaurant> Restaurants { get; set; }
         public DbSet<Review> Reviews { get; set; }
+       // public object Review { get; internal set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -63,6 +64,7 @@ namespace RestaurantReview
             modelBuilder.Entity<Review>().HasData(
                 new Review()
                 {
+                    Id = 1,
                     RestaurantId = 1,
                     Creator = "Bernard",
                     Comment = " Pepporoni Pizza is awesome",
@@ -70,6 +72,7 @@ namespace RestaurantReview
                 },
                 new Review()
                 {
+                    Id = 2,
                     RestaurantId = 2,
                     Creator = "Jay",
                     Comment = " Their burritos were great!",
@@ -77,6 +80,7 @@ namespace RestaurantReview
                 },
                 new Review()
                 {
+                    Id = 3,
                     RestaurantId = 3,
                     Creator = "Dakota",
                     Comment = "The seafood here is pretty ok for Lake Erie",
