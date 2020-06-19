@@ -11,7 +11,7 @@ namespace RestaurantReview
     {
         public DbSet<Restaurant> Restaurants { get; set; }
         public DbSet<Review> Reviews { get; set; }
-       // public object Review { get; internal set; }
+        // public object Review { get; internal set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -70,26 +70,73 @@ namespace RestaurantReview
                     Comment = " Pepporoni Pizza is awesome",
                     ReviewDate = DateTime.Now
                 },
-
+                 new Review()
+                 {
+                     Id = 2,
+                     RestaurantId = 1,
+                     Creator = "Brenda",
+                     Comment = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est quam, ornare sit amet pretium non, posuere rhoncus dui. Curabitur gravida risus eget risus scelerisque, eu tristique velit accumsan. Nam ligula purus, sagittis sed dolor vitae, posuere accumsan purus. Donec metus velit, commodo eu viverra in, lobortis ac diam. Suspendisse lacinia mi mauris, at ultrices dolor maximus eget. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos",
+                     ReviewDate = DateTime.Now
+                 },
                 new Review()
                 {
-                    Id = 2,
+                    Id = 3,
+                    RestaurantId = 1,
+                    Creator = "Corey",
+                    Comment = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est quam, ornare sit amet pretium non, posuere rhoncus dui. Curabitur gravida risus eget risus scelerisque, eu tristique velit accumsan. Nam ligula purus, sagittis sed dolor vitae, posuere accumsan purus. Donec metus velit, commodo eu viverra in, lobortis ac diam. Suspendisse lacinia mi mauris, at ultrices dolor maximus eget. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos",
+                    ReviewDate = DateTime.Now
+                },
+                new Review()
+                {
+                    Id = 4,
                     RestaurantId = 2,
-                    Creator = "Jay",
+                    Creator = "Laurie",
                     Comment = " Their burritos were great!",
                     ReviewDate = DateTime.Now
                 },
 
                 new Review()
                 {
-                    Id = 3,
+                    Id = 5,
+                    RestaurantId = 2,
+                    Creator = "Jay",
+                    Comment = " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est quam, ornare sit amet pretium non, posuere rhoncus dui. Curabitur gravida risus eget risus scelerisque, eu tristique velit accumsan. Nam ligula purus, sagittis sed dolor vitae, posuere accumsan purus. Donec metus velit, commodo eu viverra in, lobortis ac diam. Suspendisse lacinia mi mauris, at ultrices dolor maximus eget. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos",
+                    ReviewDate = DateTime.Now
+                },
+                new Review()
+                {
+                    Id = 6,
+                    RestaurantId = 2,
+                    Creator = "Josh",
+                    Comment = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est quam, ornare sit amet pretium non, posuere rhoncus dui. Curabitur gravida risus eget risus scelerisque, eu tristique velit accumsan. Nam ligula purus, sagittis sed dolor vitae, posuere accumsan purus. Donec metus velit, commodo eu viverra in, lobortis ac diam. Suspendisse lacinia mi mauris, at ultrices dolor maximus eget. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos",
+                    ReviewDate = DateTime.Now
+                },
+                new Review()
+                {
+                    Id = 7,
+                    RestaurantId = 3,
+                    Creator = "Corey",
+                    Comment = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est quam, ornare sit amet pretium non, posuere rhoncus dui. Curabitur gravida risus eget risus scelerisque, eu tristique velit accumsan. Nam ligula purus, sagittis sed dolor vitae, posuere accumsan purus. Donec metus velit, commodo eu viverra in, lobortis ac diam. Suspendisse lacinia mi mauris, at ultrices dolor maximus eget. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos",
+                    ReviewDate = DateTime.Now
+                },
+                new Review()
+                {
+                    Id = 8,
+                    RestaurantId = 3,
+                    Creator = "John",
+                    Comment = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est quam, ornare sit amet pretium non, posuere rhoncus dui. Curabitur gravida risus eget risus scelerisque, eu tristique velit accumsan. Nam ligula purus, sagittis sed dolor vitae, posuere accumsan purus. Donec metus velit, commodo eu viverra in, lobortis ac diam. Suspendisse lacinia mi mauris, at ultrices dolor maximus eget. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos",
+                    ReviewDate = DateTime.Now
+                },
+                new Review()
+                {
+                    Id = 9,
                     RestaurantId = 3,
                     Creator = "Dakota",
                     Comment = "The seafood here is pretty ok for Lake Erie",
                     ReviewDate = DateTime.Now,
                 });
 
-           base.OnModelCreating(modelBuilder);
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
