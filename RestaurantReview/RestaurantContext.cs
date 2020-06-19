@@ -70,6 +70,7 @@ namespace RestaurantReview
                     Comment = " Pepporoni Pizza is awesome",
                     ReviewDate = DateTime.Now
                 },
+
                 new Review()
                 {
                     Id = 2,
@@ -78,6 +79,7 @@ namespace RestaurantReview
                     Comment = " Their burritos were great!",
                     ReviewDate = DateTime.Now
                 },
+
                 new Review()
                 {
                     Id = 3,
