@@ -7,7 +7,21 @@ using System.Threading.Tasks;
 namespace RestaurantReview.Models
 {
     public class Restaurant
-    {//Course model = new Course("Intro to MVC", 42, "All you need to know about MVC");
+    {
+
+        public string Name { get; set; }
+        public int Id { get; set; }
+        public string Details { get; set; }
+        public string LinkImage { get; set; }
+        public string LinkUrl { get; set; }
+        public string LinkDescription { get; set; }
+
+        
+
+        public virtual ICollection<Review> Reviews { get;set; }
+
+
+
         public Restaurant(string name, int id, string details, string linkImage, string linkUrl, string linkDescription)
         {
             this.Name = name;
@@ -17,13 +31,10 @@ namespace RestaurantReview.Models
             this.LinkUrl = linkUrl;
             this.LinkDescription = linkDescription;
         }
-        public string Name { get; set; }
-        public int Id { get; set; }
-        public string Details { get; set; }
-        public string LinkImage { get; set; }
-        public string LinkUrl { get; set; }
-        public string LinkDescription { get; set; }
 
+        public Restaurant()
+        {
+        }
     }
     
 }

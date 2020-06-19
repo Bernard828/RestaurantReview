@@ -1,4 +1,10 @@
-﻿.topnav {
+﻿#restaurantInfo{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+.topnav {
     background-color: #333;
     overflow: hidden;
 }
