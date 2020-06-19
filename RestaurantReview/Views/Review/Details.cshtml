@@ -1,0 +1,31 @@
+﻿@model RestaurantReview.Models.Review
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+    <link rel="stylesheet" type="text/css" href="~/style/Homestyle.css" />
+</head>
+<body>
+    <h1>Reviews</h1>
+
+    <div id="reviewsPage">
+
+        <h3>@Model.RestaurantId</h3>
+
+
+        <p>@Model.Id @Model.Creator</p>
+        <p>@Model.Comment</p>
+        <p>@Model.ReviewDate</p>
+
+        @*<a href="/Restaurant/Details/@">Return to the main listing</a>*@
+        <a href="/Restaurant/Index">Return to the main listing</a>
+
+    </div>
+</body>
+</html>

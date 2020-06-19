@@ -9,22 +9,36 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Detals</title>
-    <link rel="stylesheet" type="text/css" href="~/style/Homestyle.css"/>
+    <link rel="stylesheet" type="text/css" href="~/style/Homestyle.css" />
 </head>
 <body>
 
     <h1>Welcome to Restaurant Reviews!</h1>
     <section>
-    <div id="sampleProjects">
-        
+        <div id="sampleProjects">
+
 
             <h3>@Model.Name</h3>
             <a href=@Model.LinkUrl target="_blank" alt="GridTestProject"
                title="GridTestProject"><img src=@Model.LinkImage id="project_item"></a>
             <p>@Model.Details</p>
-        <a href="/Restaurant/Index">Return to the main listing</a>
-        
+
+            <h5>Reviews</h5>
+            @foreach (var review in Model.Reviews)
+            {
+                <article>
+
+                    <h3>@review.Creator</h3>
+                    <p>@review.Comment</p>
+
+                </article>
+            }
+            <a href="/Restaurant/Index/">Back to Main Listing</a>
+            
+
+
+
         </div>
-        </section>
+    </section>
 </body>
 </html>
