@@ -1,52 +1,63 @@
-﻿#restaurantInfo{
+﻿#restaurantInfo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 1em;
+}
+
+#restaurantImage p {
     display: flex;
-    flex-flow: row;
-    justify-content: space-between;
+    flex-direction: column;
+    margin: 0;
 }
 
-.topnav {
-    background-color: #333;
-    overflow: hidden;
+#restaurantDetails p {
+    border: 10px solid rgb(79, 78, 136);
+    padding: 1em 1em;
+    margin: 0;
 }
 
-    .topnav a {
-        float: left;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-    }
-
-        .topnav a:hover {
-            background-color: rgb(242,141,179);
-            color: rgb(255, 255, 255);
-        }
-
-        .topnav a.active {
-            background-color: rgb(105,237,222);
-            color: rgb(255,221,255);
-        }
-
-main {
-    width: 80%;
-    margin: 3em auto;
+#restaurantInfo img {
+    height: 150px;
+    width: 200px;
+    padding-left: 15%;
 }
+
+#restaurantReview {
+    padding: 0em 2em;
+}
+
+#reviews p {
+    border: 10px solid rgb(79, 78, 136);
+    padding: 1em 1em;
+    margin: 0;
+}
+
+#reviews h5 {
+    margin: 1em 0 0 0;
+}
+
 #sampleProjects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     grid-column-gap: 1em;
 }
+
+
+main {
+    width: 80%;
+    margin: 3em auto;
+}
+
 body {
-    
-    background-image: url(images/viktor-juric-zR4itwRfBX8-unsplash.jpg);
     background-size: cover;
     height: 100%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    color: var(--black);
+    color: black;
+    background-color: rgb(242,141,179);
     font: 16px/1.5 'Raleway', sans-serif;
 }
 
