@@ -1,7 +1,18 @@
-﻿#restaurantInfo{
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
+﻿#restaurantInfo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 1em;
+}
+
+#restaurantReview {
+    padding: 0em 2em;
+    
+}
+
+#reviews p {
+    border: 10px solid rgb(79, 78, 136);
+
 }
 
 .topnav {
