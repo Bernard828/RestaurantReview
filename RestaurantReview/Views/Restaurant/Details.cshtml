@@ -16,13 +16,15 @@
 <body>
 
     <h1>Welcome to Restaurant Reviews!</h1>
-    <section>
+    <section id="restaurantInfo">
 
-        <div id="restaurantInfo">
+        <div id="restaurantImage">
             <h3>@Model.Name</h3>
             <a href=@Model.LinkUrl target="_blank" alt="GridTestProject"
                title=@Model.LinkDescription><img src=@Model.LinkImage id="project_item"></a>
-            <p>@Model.Details</p>
+        </div>
+        <div id="restaurantDetails">
+             <p>@Model.Details</p>
         </div>
 
         <div id="restaurantReview">

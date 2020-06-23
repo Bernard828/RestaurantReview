@@ -1,8 +1,20 @@
 ﻿#restaurantInfo {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     grid-column-gap: 1em;
+}
+
+#restaurantImage p {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+#restaurantDetails p {
+    border: 10px solid rgb(79, 78, 136);
+    padding: 1em 1em;
+    margin: 0;
 }
 
 #restaurantInfo img {
