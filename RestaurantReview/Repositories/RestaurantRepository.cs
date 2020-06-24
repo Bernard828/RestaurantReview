@@ -39,5 +39,10 @@ namespace RestaurantReview.Repositories
         {
             throw new NotImplementedException();
         }
+        public void Delete(Restaurant obj)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

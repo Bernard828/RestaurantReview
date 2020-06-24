@@ -31,13 +31,15 @@
 
                 <h3>@review.Creator</h3>
                 <p>@review.Comment</p>
-                <a href="/Review/Update/@review.Id">Update a review. I really hope this works!</a>
+                <a href="/Review/Update/@review.Id">Edit review.</a>
+                <a href="/Review/Delete/@review.Id">Remove review.</a>
 
             </article>
                 }
-                <a href="/Review/CreateByRestaurantId/@Model.Id">Add a new review. I really hope this works!</a>
+                <a href="/Review/CreateByRestaurantId/@Model.Id">Add a new review.</a>
                 <br>
                 <br>
+
                 <br>
                 <a href="/Restaurant/Index/">Back to Main Listing</a>
             </div>

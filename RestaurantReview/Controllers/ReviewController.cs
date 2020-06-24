@@ -79,9 +79,29 @@ namespace RestaurantReview.Controllers
         [HttpGet]
         public ViewResult Update(int id)
         {
-            Review model = reviewRepo.GetById(id);
-            return View();
+            Review review = reviewRepo.GetById(id);
+            review.ReviewDate = DateTime.Now;
+            return View(review);
+        }
+        [HttpPost]
+        public ActionResult Delete(Review review)
+        {
+
+
+            if (ModelState.IsValid)
+            {
+                reviewRepo.Delete(review);
+                return RedirectToAction("Index");
+            }
+
+            return View(review);
         }
 
+        [HttpGet]
+        public ViewResult Delete(int id)
+        {
+            Review review = reviewRepo.GetById(id);
+            return View(review);
+        }
     }
 }
