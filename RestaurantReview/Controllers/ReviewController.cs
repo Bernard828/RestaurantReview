@@ -60,5 +60,28 @@ namespace RestaurantReview.Controllers
             ViewBag.RestaurantId = id;
             return View();
         }
+
+        [HttpPost]
+        public ActionResult Update(Review review)
+        {
+
+            review.ReviewDate = DateTime.Now;
+
+            if (ModelState.IsValid)
+            {
+                reviewRepo.Update(review);
+                return RedirectToAction("Index");
+            }
+
+            return View(review);
+        }
+
+        [HttpGet]
+        public ViewResult Update(int id)
+        {
+            Review model = reviewRepo.GetById(id);
+            return View();
+        }
+
     }
 }

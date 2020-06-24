@@ -35,6 +35,9 @@ namespace RestaurantReview.Repositories
             throw new NotImplementedException();
         }
 
-
+        public void Update(Restaurant obj)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

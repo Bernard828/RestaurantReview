@@ -30,5 +30,11 @@ namespace RestaurantReview.Repositories
             db.Reviews.Add(review);
             db.SaveChanges();
         }
+
+        public void Update(Review review)
+        {
+            db.Reviews.Update(review);
+            db.SaveChanges();
+        }
     }
 }
