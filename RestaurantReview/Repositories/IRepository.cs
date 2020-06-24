@@ -10,6 +10,8 @@ namespace RestaurantReview.Repositories
         
             public IEnumerable<T> GetAll();
             T GetById(int id);
-        
+
+        void Create(T obj);
+
     }
 }

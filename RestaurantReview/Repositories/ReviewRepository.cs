@@ -14,19 +14,21 @@ namespace RestaurantReview.Repositories
             this.db = db;
         }
 
-        //public void Create(Review review)
-        //{
-        //    db.Review.Add(review);
-        //    db.SaveChanges();
-        //}
-
+        
         public IEnumerable<Review> GetAll()
         {
             return db.Reviews.ToList();
         }
         public Review GetById(int id)
         {
-            return db.Reviews.Single(c => c.Id == id); // FirstAndDefault(x => x.Id == id);
+            return db.Reviews.Single(c => c.Id == id); 
+        }
+
+
+        public void Create(Review review)
+        {
+            db.Reviews.Add(review);
+            db.SaveChanges();
         }
     }
 }

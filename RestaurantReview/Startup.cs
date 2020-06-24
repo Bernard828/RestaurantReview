@@ -27,6 +27,7 @@ namespace RestaurantReview
             services.AddMvc();
             services.AddDbContext<RestaurantContext>();
             services.AddScoped<IRepository<Restaurant>, RestaurantRepository>();
+            services.AddScoped<IRepository<Review>, ReviewRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
