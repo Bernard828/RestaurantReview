@@ -48,7 +48,7 @@ namespace RestaurantReview.Controllers
             if (ModelState.IsValid)
             {
                 reviewRepo.Create(review);
-                return RedirectToAction("Index");
+                return RedirectToAction("Details", "Restaurant", new { id = review.RestaurantId});
             }
            
             return View(review);
