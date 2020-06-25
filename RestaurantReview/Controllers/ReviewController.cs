@@ -70,7 +70,7 @@ namespace RestaurantReview.Controllers
             if (ModelState.IsValid)
             {
                 reviewRepo.Update(review);
-                return RedirectToAction("Index");
+                return RedirectToAction("Details", "Restaurant", new { id = review.RestaurantId });
             }
 
             return View(review);
@@ -88,13 +88,14 @@ namespace RestaurantReview.Controllers
         public ActionResult Delete(Review review)
         {
 
-
             if (ModelState.IsValid)
             {
-                reviewRepo.Delete(review);
-                return RedirectToAction("Details", "Restaurant", new { id = review.RestaurantId });
-            }
+                int restaurantId = review.RestaurantId;
 
+                reviewRepo.Delete(review);
+              
+                return RedirectToAction("Details", "Restaurant", new { id = restaurantId });
+            }
             return View(review);
         }
 
