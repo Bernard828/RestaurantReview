@@ -6,28 +6,35 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Detals</title>
+    <title>Details</title>
     <link rel="stylesheet" type="text/css" href="~/style/Homestyle.css" />
 </head>
+
 <body>
 
     <h1>Welcome to Restaurant Reviews!</h1>
-    <section>
-       
-            <div id="restaurantInfo">
-                <h3>@Model.Name</h3>
-                <a href=@Model.LinkUrl target="_blank" alt="GridTestProject"
-                   title="GridTestProject"><img src=@Model.LinkImage id="project_item"></a>
-                <p>@Model.Details</p>
-            </div>
-           
-            <div id="restaurantReview">
-                <h5>Reviews</h5>
+    <section id="restaurantInfo">
+
+        <div id="restaurantImage">
+            <h3>@Model.Name</h3>
+            <a href=@Model.LinkUrl target="_blank" alt="GridTestProject"
+               title=@Model.LinkDescription><img src=@Model.LinkImage id="project_item"></a>
+        </div>
+        <div id="restaurantDetails">
+             <p>@Model.Details</p>
+        </div>
+
+        <div id="restaurantReview">
+            <h3>Reviews</h3>
+            <div id="reviews">
+
                 @foreach (var review in Model.Reviews)
                 {
             <article>
+
 
                 <h3>@review.Creator</h3>
                 <p>@review.Comment</p>
@@ -35,14 +42,15 @@
                 <a href="/Review/Delete/@review.Id">Remove review.</a>
 
             </article>
-                }
+
                 <a href="/Review/CreateByRestaurantId/@Model.Id">Add a new review.</a>
                 <br>
                 <br>
 
                 <br>
                 <a href="/Restaurant/Index/">Back to Main Listing</a>
-            </div>
+          </div>
+      </div>
 
     </section>
 </body>

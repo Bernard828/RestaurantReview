@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RestaurantReview;
 
 namespace RestaurantReview.Migrations
 {
     [DbContext(typeof(RestaurantContext))]
-    partial class RestaurantContextModelSnapshot : ModelSnapshot
+    [Migration("20200623155709_ChangedRestaurantDetailsAndReviews")]
+    partial class ChangedRestaurantDetailsAndReviews
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -107,9 +109,7 @@ namespace RestaurantReview.Migrations
                             Comment = "Pepporoni Pizza is awesome. The lady at the counter was great! She tossed in some extra breadsticks because they were honoring the community that day! Thanks again Donato's i'll be back!!!",
                             Creator = "Bernard",
                             RestaurantId = 1,
-
-                            ReviewDate = new DateTime(2020, 6, 25, 10, 41, 51, 168, DateTimeKind.Local).AddTicks(9132)
-
+                            ReviewDate = new DateTime(2020, 6, 23, 11, 57, 8, 618, DateTimeKind.Local).AddTicks(9588)
                         },
                         new
                         {
@@ -125,9 +125,7 @@ namespace RestaurantReview.Migrations
                             Comment = "Hopefully the previous comments got this place in 5 star shape because I just ordered for the first time and it is delicious! I ordered a large create your own with well done instructions and it came early and perfectly done. Glad I gave them a chance. The delivery gal was super friendly too!",
                             Creator = "Corey",
                             RestaurantId = 1,
-
-                            ReviewDate = new DateTime(2020, 6, 25, 10, 41, 51, 173, DateTimeKind.Local).AddTicks(3248)
-
+                            ReviewDate = new DateTime(2020, 6, 23, 11, 57, 8, 625, DateTimeKind.Local).AddTicks(7112)
                         },
                         new
                         {
@@ -135,9 +133,7 @@ namespace RestaurantReview.Migrations
                             Comment = "We were in town from out of state and decided to stop in for dinner. Fun atmosphere, amazing food and drinks ( loved the Pink Dragon!) I would definitely come back if I’m ever in the area. The 2 people working there were very friendly and did their job well and with smiles on their faces adding to the great atmosphere!",
                             Creator = "Laurie",
                             RestaurantId = 2,
-
-                            ReviewDate = new DateTime(2020, 6, 25, 10, 41, 51, 173, DateTimeKind.Local).AddTicks(3323)
-
+                            ReviewDate = new DateTime(2020, 6, 23, 11, 57, 8, 625, DateTimeKind.Local).AddTicks(7226)
                         },
                         new
                         {
@@ -145,9 +141,7 @@ namespace RestaurantReview.Migrations
                             Comment = "This place might have ruined Chipotle for me. The food here is so amazing I don’t want any Mexican anywhere else again!",
                             Creator = "Jay",
                             RestaurantId = 2,
-
-                            ReviewDate = new DateTime(2020, 6, 25, 10, 41, 51, 173, DateTimeKind.Local).AddTicks(3331)
-
+                            ReviewDate = new DateTime(2020, 6, 23, 11, 57, 8, 625, DateTimeKind.Local).AddTicks(7248)
                         },
                         new
                         {
@@ -155,9 +149,7 @@ namespace RestaurantReview.Migrations
                             Comment = "We love Agave! Very family friendly, great prices, great food and nice staff! Highly recommend their queso and chips! This is a fast casual type of restaurant.",
                             Creator = "Josh",
                             RestaurantId = 2,
-
-                            ReviewDate = new DateTime(2020, 6, 25, 10, 41, 51, 173, DateTimeKind.Local).AddTicks(3335)
-
+                            ReviewDate = new DateTime(2020, 6, 23, 11, 57, 8, 625, DateTimeKind.Local).AddTicks(7265)
                         },
                         new
                         {
@@ -165,9 +157,7 @@ namespace RestaurantReview.Migrations
                             Comment = "Surprisingly, there are not many Cleveland restaurants with a good lake view, but Pier W has the best. Plus, the selections of meals for lunch are outstanding. The service was excellent and meals reasonable and filling. We enjoyed perch, salmon, scallops, The lobster bisque and manilla clam chowder were equally tasty. Our guests left satisfied and impressed with their visit to Lakewood and Pier W.",
                             Creator = "Corey",
                             RestaurantId = 3,
-
-                            ReviewDate = new DateTime(2020, 6, 25, 10, 41, 51, 173, DateTimeKind.Local).AddTicks(3339)
-
+                            ReviewDate = new DateTime(2020, 6, 23, 11, 57, 8, 625, DateTimeKind.Local).AddTicks(7282)
                         },
                         new
                         {
@@ -175,9 +165,7 @@ namespace RestaurantReview.Migrations
                             Comment = "Ventured to Pier W for dinner on our 22nd wedding anniversary. We were seated quickly with a waterview despite our running late. Our server was polite, knowledgeable & helpful. Our ceviche appetizer was just so-so, but the lobster bisque was delicious. Our dinners consisted of lobster pappardelle & bouillabaisse. The lobster pappardelle was done in a cream sauce that was well- balanced. The bouillabaisse was outstanding; loaded with scallops, muscles, shrimp, scallops & fish. The accompanying broth was fantastic & didn't overpower the seafood. We received a complimentary cheesecake for our anniversary that was very good & the wife took a serving of Buttercake home for good measure... and the next morning's snack.",
                             Creator = "John",
                             RestaurantId = 3,
-
-                            ReviewDate = new DateTime(2020, 6, 25, 10, 41, 51, 173, DateTimeKind.Local).AddTicks(3343)
-
+                            ReviewDate = new DateTime(2020, 6, 23, 11, 57, 8, 625, DateTimeKind.Local).AddTicks(7298)
                         },
                         new
                         {
@@ -185,9 +173,7 @@ namespace RestaurantReview.Migrations
                             Comment = "I am one who doesn't complain, but when I went to Pier W I witnessed an injustice that ruined my whole experience there. I witnessed the general manager. Scream at and berate a poor teenage busser for not moving a chair down to a table fast enough for his liking. Then the man noticed us watching him. He approached our table right by the stars. My girlfriend and I felt awkward after seeing this man throw a tempertantrum, come up to us calmly and ask us how our dinner is going. After a awkward conversation that lasted way to long with him, he walked away. 20 mins after he was screaming at someone in his headset. Nice restaurant, bad manager!!!",
                             Creator = "Dakota",
                             RestaurantId = 3,
-
-                            ReviewDate = new DateTime(2020, 6, 25, 10, 41, 51, 173, DateTimeKind.Local).AddTicks(3348)
-
+                            ReviewDate = new DateTime(2020, 6, 23, 11, 57, 8, 625, DateTimeKind.Local).AddTicks(7314)
                         });
                 });
 

@@ -20,18 +20,15 @@
        
         @foreach (var restaurant in Model)
         {
-            @*<p>Title:<span>@restaurant.Name</span></p>
-                <p>Review:<span>@restaurant.Details</span></p>
-                <p>Id:<span>@restaurant.Id</span></p>*@
-        <article>
+            <article>
 
-            <h3>@restaurant.Name</h3>
-            <a href=@restaurant.LinkUrl target="_blank" alt="GridTestProject"
-               title="GridTestProject"><img src=@restaurant.LinkImage id="project_item"></a>
-            <p>@restaurant.Details</p>
-            <a href="/Restaurant/Details/@restaurant.Id">Details for @restaurant.Name</a>
+                <h3>@restaurant.Name</h3>
+                <a href=@restaurant.LinkUrl target="_blank" alt="GridTestProject"
+                   title=@restaurant.LinkDescription><img src=@restaurant.LinkImage id="project_item"></a>
+                <p>@restaurant.Details</p>
+                <a href="/Restaurant/Details/@restaurant.Id">Details for @restaurant.Name</a>
 
-        </article>
+            </article>
 
         }
         </div>
