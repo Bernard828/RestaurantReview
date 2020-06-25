@@ -18,6 +18,7 @@ namespace RestaurantReview.Repositories
         {
             this.db = otherDb;
         }
+
         public IEnumerable<Restaurant> GetAll()
         {
             return db.Restaurants.ToList();
@@ -27,6 +28,21 @@ namespace RestaurantReview.Repositories
         {
             return db.Restaurants.FirstOrDefault(x => x.Id == id);
         }
-        
+
+
+        public void Create(Restaurant obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(Restaurant obj)
+        {
+            throw new NotImplementedException();
+        }
+        public void Delete(Restaurant obj)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

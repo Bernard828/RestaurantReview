@@ -33,16 +33,24 @@
 
                 @foreach (var review in Model.Reviews)
                 {
-                    <article>
+            <article>
 
-                        <h5>@review.Creator</h5>
-                        <p>@review.Comment</p>
 
-                    </article>
-                }
-            </div>
-            <a href="/Restaurant/Index/">Back to Main Listing</a>
-        </div>
+                <h3>@review.Creator</h3>
+                <p>@review.Comment</p>
+                <a href="/Review/Update/@review.Id">Edit review.</a>
+                <a href="/Review/Delete/@review.Id">Remove review.</a>
+
+            </article>
+
+                <a href="/Review/CreateByRestaurantId/@Model.Id">Add a new review.</a>
+                <br>
+                <br>
+
+                <br>
+                <a href="/Restaurant/Index/">Back to Main Listing</a>
+          </div>
+      </div>
 
     </section>
 </body>
