@@ -83,6 +83,7 @@ namespace RestaurantReview.Controllers
             review.ReviewDate = DateTime.Now;
             return View(review);
         }
+
         [HttpPost]
         public ActionResult Delete(Review review)
         {
@@ -91,7 +92,7 @@ namespace RestaurantReview.Controllers
             if (ModelState.IsValid)
             {
                 reviewRepo.Delete(review);
-                return RedirectToAction("Index");
+                return RedirectToAction("Details", "Restaurant", new { id = review.RestaurantId });
             }
 
             return View(review);
