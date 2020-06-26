@@ -1,9 +1,11 @@
-﻿﻿#restaurantInfo {
+﻿﻿#restaurantInfo > div {
     display: flex;
-    flex-direction:row;
+
+    flex-flow: row;
     
     justify-content: space-around;
 }
+
 
 #restaurantImage p {
     display: flex;
