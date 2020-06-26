@@ -18,10 +18,13 @@
     <h1>Welcome to Restaurant Reviews!</h1>
     <section>
 
-        <div id="restaurantInfo">
+        <div>
             <h3>@Model.Name</h3>
+        </div>
+
+        <div id="restaurantInfo">
             <a href=@Model.LinkUrl target="_blank" alt="GridTestProject"
-               title="GridTestProject"><img src=@Model.LinkImage id="project_item"></a>>
+               title="GridTestProject"><img src=@Model.LinkImage id="project_item"></a>
             <p>@Model.Details</p>
         </div>
         <br>
@@ -45,11 +48,8 @@
 
                 </article>
             }
-
-            <a href="/Review/CreateByRestaurantId/@Model.Id">Add a new review.</a>
             <br>
             <br>
-
             <br>
             <a href="/Restaurant/Index/">Back to Main Listing</a>
         </div>

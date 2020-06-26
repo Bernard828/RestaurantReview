@@ -1,6 +1,7 @@
 ﻿﻿#restaurantInfo {
-    display: inline-flex;
-    flex-direction: row;
+    display: flex;
+    flex-direction:row;
+    
     justify-content: space-around;
 }
 
