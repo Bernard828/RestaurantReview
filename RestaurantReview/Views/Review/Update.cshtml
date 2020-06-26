@@ -5,9 +5,9 @@
     ViewData["Title"] = "Update";
 }
 
-<h1>View</h1>
+<link rel="stylesheet" type="text/css" href="~/style/Homestyle.css" />
 
-<h4>Review</h4>
+<h1>Edit Restaurant Review</h1>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -17,17 +17,19 @@
             <div class="form-group">
                 <input type="hidden" asp-for="RestaurantId" class="form-control" value="@Model.RestaurantId" />
             </div>
-
+            <br />
             <div class="form-group">
                 <label asp-for="Creator" class="control-label"></label>
                 <input asp-for="Creator" class="form-control" />
                 <span asp-validation-for="Creator" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
                 <label asp-for="Comment" class="control-label"></label>
-                <input asp-for="Comment" class="form-control" />
+                <input asp-for="Comment" class="form-control" size="100"/>
                 <span asp-validation-for="Comment" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
@@ -36,6 +38,6 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Back to Restaurant Detail</a>
 </div>
 

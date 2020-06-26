@@ -16,9 +16,9 @@ namespace RestaurantReview.Models
         public string LinkUrl { get; set; }
         public string LinkDescription { get; set; }
 
-        
 
-        public virtual ICollection<Review> Reviews { get;set; }
+
+        public virtual ICollection<Review> Reviews { get; set; }
 
 
 
@@ -36,5 +36,5 @@ namespace RestaurantReview.Models
         {
         }
     }
-    
+
 }

@@ -9,29 +9,27 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
-    <link rel="stylesheet" type="text/css" href="~/style/Homestyle.css"/>
+    <link rel="stylesheet" type="text/css" href="~/style/Homestyle.css" />
 </head>
 <body>
 
     <h1>Welcome to Restaurant Reviews!</h1>
     <section>
-    <div id="sampleProjects">
-        
-       
-        @foreach (var restaurant in Model)
-        {
-            <article>
+        <div id="sampleProjects">
+            @foreach (var restaurant in Model)
+            {
+                <article>
 
-                <h3>@restaurant.Name</h3>
-                <a href=@restaurant.LinkUrl target="_blank" alt="GridTestProject"
-                   title=@restaurant.LinkDescription><img src=@restaurant.LinkImage id="project_item"></a>
-                <p>@restaurant.Details</p>
-                <a href="/Restaurant/Details/@restaurant.Id">Details for @restaurant.Name</a>
+                    <h3>@restaurant.Name</h3>
+                    <a href=@restaurant.LinkUrl target="_blank" alt="GridTestProject"
+                       title=@restaurant.LinkDescription><img src=@restaurant.LinkImage id="project_item"></a>
+                    <p>@restaurant.Details</p>
+                    <a href="/Restaurant/Details/@restaurant.Id">Details for @restaurant.Name</a>
 
-            </article>
+                </article>
+            }
 
-        }
         </div>
-        </section>
+    </section>
 </body>
 </html>

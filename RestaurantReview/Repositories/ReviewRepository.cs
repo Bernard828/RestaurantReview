@@ -14,16 +14,15 @@ namespace RestaurantReview.Repositories
             this.db = db;
         }
 
-        
+
         public IEnumerable<Review> GetAll()
         {
             return db.Reviews.ToList();
         }
         public Review GetById(int id)
         {
-            return db.Reviews.Single(c => c.Id == id); 
+            return db.Reviews.Single(c => c.Id == id);
         }
-
 
         public void Create(Review review)
         {

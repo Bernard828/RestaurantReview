@@ -16,42 +16,43 @@
 <body>
 
     <h1>Welcome to Restaurant Reviews!</h1>
-    <section id="restaurantInfo">
+    <section>
 
-        <div id="restaurantImage">
+        <div id="restaurantInfo">
             <h3>@Model.Name</h3>
             <a href=@Model.LinkUrl target="_blank" alt="GridTestProject"
-               title=@Model.LinkDescription><img src=@Model.LinkImage id="project_item"></a>
+               title="GridTestProject"><img src=@Model.LinkImage id="project_item"></a>>
+            <p>@Model.Details</p>
         </div>
-        <div id="restaurantDetails">
-             <p>@Model.Details</p>
-        </div>
+        <br>
+        <a href="/Restaurant/Index/">Back to Main Listing</a>
+        <br />
+        <a href="/Review/CreateByRestaurantId/@Model.Id">Add a new review.</a>
 
         <div id="restaurantReview">
             <h3>Reviews</h3>
-            <div id="reviews">
+            @foreach (var review in Model.Reviews)
+            {
+                <article>
 
-                @foreach (var review in Model.Reviews)
-                {
-            <article>
+                    <h3>Reviewer: @review.Creator</h3>
+                    <p>Reviewer Comments: @review.Comment</p>
 
 
-                <h3>@review.Creator</h3>
-                <p>@review.Comment</p>
-                <a href="/Review/Update/@review.Id">Edit review.</a>
-                <a href="/Review/Delete/@review.Id">Remove review.</a>
+                    <a href="/Review/Update/@review.Id">Edit review.</a>
+                    <br />
+                    <a href="/Review/Delete/@review.Id">Remove review.</a>
 
-            </article>
+                </article>
+            }
 
-                <a href="/Review/CreateByRestaurantId/@Model.Id">Add a new review.</a>
-                <br>
-                <br>
+            <a href="/Review/CreateByRestaurantId/@Model.Id">Add a new review.</a>
+            <br>
+            <br>
 
-                <br>
-                <a href="/Restaurant/Index/">Back to Main Listing</a>
-          </div>
-      </div>
-
+            <br>
+            <a href="/Restaurant/Index/">Back to Main Listing</a>
+        </div>
     </section>
 </body>
 </html>
