@@ -20,12 +20,10 @@ namespace RestaurantReview.Controllers
             this.restRepo = restRepo;
         }
 
-
-
         public ViewResult Index()
         {
            //Use our repo that is on line 17
-        var model = restRepo.GetAll();
+            var model = restRepo.GetAll();
             return View(model);
         }
 

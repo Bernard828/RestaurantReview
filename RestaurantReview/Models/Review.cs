@@ -9,18 +9,17 @@ namespace RestaurantReview.Models
     public class Review
     {
         [Required]
-        public int Id { get;  set; }
+        public int Id { get; set; }
 
-      ///  [Required]
         public int RestaurantId { get; set; }
 
-      
+        [Required]
         public string Creator { get; set; }
 
-       
+        [Required]
         public string Comment { get; set; }
 
-       
+
         public DateTime ReviewDate { get; set; }
 
 

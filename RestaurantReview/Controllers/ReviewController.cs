@@ -3,10 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using  RestaurantReview.Models;
+using RestaurantReview.Models;
 using RestaurantReview.Repositories;
 
- 
+
 namespace RestaurantReview.Controllers
 {
     public class ReviewController : Controller
@@ -48,9 +48,9 @@ namespace RestaurantReview.Controllers
             if (ModelState.IsValid)
             {
                 reviewRepo.Create(review);
-                return RedirectToAction("Details", "Restaurant", new { id = review.RestaurantId});
+                return RedirectToAction("Details", "Restaurant", new { id = review.RestaurantId });
             }
-           
+
             return View(review);
         }
 
@@ -93,7 +93,7 @@ namespace RestaurantReview.Controllers
                 int restaurantId = review.RestaurantId;
 
                 reviewRepo.Delete(review);
-              
+
                 return RedirectToAction("Details", "Restaurant", new { id = restaurantId });
             }
             return View(review);
